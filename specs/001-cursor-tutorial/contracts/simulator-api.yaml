@@ -1,0 +1,240 @@
+openapi: 3.0.3
+info:
+  title: Simulator API
+  description: |
+    API for code editor simulation and practice scenarios.
+    Manages simulated AI responses and user interactions.
+  version: 1.0.0
+
+paths:
+  /scenarios:
+    get:
+      summary: List scenarios
+      description: Get all available simulation scenarios
+      operationId: listScenarios
+      parameters:
+        - name: command
+          in: query
+          schema:
+            type: string
+            enum: [tab, ctrl-k, ctrl-l, at-mention]
+          description: Filter by command type
+        - name: difficulty
+          in: query
+          schema:
+            type: string
+            enum: [beginner, intermediate, advanced]
+      responses:
+        '200':
+          description: List of scenarios
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScenarioSummary'
+
+  /scenarios/{scenarioId}:
+    get:
+      summary: Get scenario
+      description: Retrieve full scenario with steps
+      operationId: getScenario
+      parameters:
+        - name: scenarioId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Scenario details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimulationScenario'
+        '404':
+          description: Scenario not found
+
+  /scenarios/{scenarioId}/validate:
+    post:
+      summary: Validate user action
+      description: Check if user's action matches expected interaction
+      operationId: validateAction
+      parameters:
+        - name: scenarioId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                stepId:
+                  type: string
+                action:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      enum: [keystroke, command, click]
+                    value:
+                      type: string
+                context:
+                  type: object
+                  properties:
+                    currentCode:
+                      type: string
+                    cursorPosition:
+                      type: object
+                      properties:
+                        line:
+                          type: integer
+                        column:
+                          type: integer
+      responses:
+        '200':
+          description: Validation result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  response:
+                    $ref: '#/components/schemas/SimulatedResponse'
+                  nextStepId:
+                    type: string
+                    nullable: true
+                  message:
+                    type: string
+
+  /simulate/respond:
+    post:
+      summary: Get simulated AI response
+      description: Generate simulated AI response based on context
+      operationId: simulateResponse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                scenarioId:
+                  type: string
+                stepId:
+                  type: string
+                userAction:
+                  type: object
+                context:
+                  type: object
+                  properties:
+                    code:
+                      type: string
+                    selection:
+                      type: string
+                rules:
+                  type: array
+                  items:
+                    type: string
+                  description: Active cursor rules to apply
+      responses:
+        '200':
+          description: Simulated response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimulatedResponse'
+
+components:
+  schemas:
+    ScenarioSummary:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        difficulty:
+          type: string
+        targetCommand:
+          type: string
+
+    SimulationScenario:
+      allOf:
+        - $ref: '#/components/schemas/ScenarioSummary'
+        - type: object
+          properties:
+            initialCode:
+              type: string
+            language:
+              type: string
+            targetCommand:
+              type: object
+              properties:
+                type:
+                  type: string
+                shortcut:
+                  type: string
+                description:
+                  type: string
+            steps:
+              type: array
+              items:
+                $ref: '#/components/schemas/SimulationStep'
+            hints:
+              type: array
+              items:
+                type: string
+
+    SimulationStep:
+      type: object
+      properties:
+        order:
+          type: integer
+        instruction:
+          type: string
+        trigger:
+          type: object
+          properties:
+            type:
+              type: string
+            value:
+              type: string
+        response:
+          $ref: '#/components/schemas/SimulatedResponse'
+        validation:
+          type: object
+          properties:
+            expectedInput:
+              type: string
+            expectedCodeChange:
+              type: string
+
+    SimulatedResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [code-completion, inline-edit, chat-message, context-menu]
+        content:
+          type: string
+        delay:
+          type: integer
+          description: Simulated thinking time in ms
+        metadata:
+          type: object
+          properties:
+            confidence:
+              type: number
+            alternatives:
+              type: array
+              items:
+                type: string

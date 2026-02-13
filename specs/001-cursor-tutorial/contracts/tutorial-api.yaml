@@ -1,0 +1,148 @@
+openapi: 3.0.3
+info:
+  title: Cursor Tutorial API
+  description: |
+    Internal API for accessing tutorial data.
+    Note: These are client-side functions operating on static data and localStorage.
+    No HTTP requests are made - this spec documents the interface contract.
+  version: 1.0.0
+
+paths:
+  /tutorials:
+    get:
+      summary: List all tutorials
+      description: Retrieve all available tutorials with metadata
+      operationId: listTutorials
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+            enum: [installation, commands, rules, project]
+          description: Filter by category
+        - name: difficulty
+          in: query
+          schema:
+            type: string
+            enum: [beginner, intermediate, advanced]
+          description: Filter by difficulty
+      responses:
+        '200':
+          description: List of tutorials
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TutorialSummary'
+
+  /tutorials/{tutorialId}:
+    get:
+      summary: Get tutorial details
+      description: Retrieve full tutorial with all steps
+      operationId: getTutorial
+      parameters:
+        - name: tutorialId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Tutorial details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tutorial'
+        '404':
+          description: Tutorial not found
+
+  /tutorials/{tutorialId}/steps/{stepId}:
+    get:
+      summary: Get specific step
+      description: Retrieve a single tutorial step
+      operationId: getStep
+      parameters:
+        - name: tutorialId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: stepId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Step details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TutorialStep'
+
+components:
+  schemas:
+    TutorialSummary:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        difficulty:
+          type: string
+          enum: [beginner, intermediate, advanced]
+        estimatedTime:
+          type: integer
+          description: Minutes
+        category:
+          type: string
+        isCompleted:
+          type: boolean
+        progress:
+          type: integer
+          description: Percentage complete
+
+    Tutorial:
+      allOf:
+        - $ref: '#/components/schemas/TutorialSummary'
+        - type: object
+          properties:
+            prerequisites:
+              type: array
+              items:
+                type: string
+            steps:
+              type: array
+              items:
+                $ref: '#/components/schemas/TutorialStep'
+
+    TutorialStep:
+      type: object
+      properties:
+        id:
+          type: string
+        order:
+          type: integer
+        title:
+          type: string
+        content:
+          type: string
+          description: Markdown content
+        type:
+          type: string
+          enum: [content, simulation, practice, quiz]
+        simulationId:
+          type: string
+          nullable: true
+        completionCriteria:
+          type: object
+          properties:
+            type:
+              type: string
+              enum: [view, action, success, time]
+            params:
+              type: object

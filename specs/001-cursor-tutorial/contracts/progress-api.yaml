@@ -1,0 +1,241 @@
+openapi: 3.0.3
+info:
+  title: Progress Tracking API
+  description: |
+    API for tracking user progress through tutorials.
+    All data stored in localStorage.
+  version: 1.0.0
+
+paths:
+  /progress:
+    get:
+      summary: Get overall progress
+      description: Retrieve user's progress across all tutorials
+      operationId: getProgress
+      responses:
+        '200':
+          description: User progress data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProgress'
+
+    post:
+      summary: Initialize progress
+      description: Create new progress record for anonymous user
+      operationId: initProgress
+      responses:
+        '201':
+          description: Progress initialized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProgress'
+
+  /progress/tutorials/{tutorialId}:
+    get:
+      summary: Get tutorial progress
+      description: Retrieve progress for specific tutorial
+      operationId: getTutorialProgress
+      parameters:
+        - name: tutorialId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Tutorial progress
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TutorialProgress'
+
+    put:
+      summary: Update tutorial progress
+      description: Update progress for a tutorial
+      operationId: updateTutorialProgress
+      parameters:
+        - name: tutorialId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TutorialProgressUpdate'
+      responses:
+        '200':
+          description: Progress updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TutorialProgress'
+
+  /progress/tutorials/{tutorialId}/steps/{stepId}/complete:
+    post:
+      summary: Mark step complete
+      description: Mark a tutorial step as completed
+      operationId: completeStep
+      parameters:
+        - name: tutorialId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: stepId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Step marked complete
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TutorialProgress'
+
+  /progress/simulations:
+    post:
+      summary: Record simulation result
+      description: Save result from simulation practice
+      operationId: recordSimulationResult
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SimulationResult'
+      responses:
+        '201':
+          description: Result recorded
+
+  /progress/preferences:
+    get:
+      summary: Get user preferences
+      operationId: getPreferences
+      responses:
+        '200':
+          description: User preferences
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserPreferences'
+
+    put:
+      summary: Update preferences
+      operationId: updatePreferences
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserPreferences'
+      responses:
+        '200':
+          description: Preferences updated
+
+components:
+  schemas:
+    UserProgress:
+      type: object
+      properties:
+        userId:
+          type: string
+        startedAt:
+          type: string
+          format: date-time
+        lastActiveAt:
+          type: string
+          format: date-time
+        tutorials:
+          type: array
+          items:
+            $ref: '#/components/schemas/TutorialProgress'
+        stats:
+          type: object
+          properties:
+            totalTutorialsCompleted:
+              type: integer
+            totalStepsCompleted:
+              type: integer
+            totalTimeSpent:
+              type: integer
+
+    TutorialProgress:
+      type: object
+      properties:
+        tutorialId:
+          type: string
+        status:
+          type: string
+          enum: [not-started, in-progress, completed]
+        currentStepId:
+          type: string
+          nullable: true
+        completedStepIds:
+          type: array
+          items:
+            type: string
+        startedAt:
+          type: string
+          format: date-time
+          nullable: true
+        completedAt:
+          type: string
+          format: date-time
+          nullable: true
+        simulationResults:
+          type: array
+          items:
+            $ref: '#/components/schemas/SimulationResult'
+
+    TutorialProgressUpdate:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [not-started, in-progress, completed]
+        currentStepId:
+          type: string
+        completedStepIds:
+          type: array
+          items:
+            type: string
+
+    SimulationResult:
+      type: object
+      properties:
+        scenarioId:
+          type: string
+        attempts:
+          type: integer
+        successful:
+          type: boolean
+        completedAt:
+          type: string
+          format: date-time
+        timeSpent:
+          type: integer
+          description: Seconds
+        hintsUsed:
+          type: integer
+
+    UserPreferences:
+      type: object
+      properties:
+        os:
+          type: string
+          enum: [windows, macos, linux]
+          nullable: true
+        theme:
+          type: string
+          enum: [light, dark, system]
+        editorFontSize:
+          type: integer
+        reduceMotion:
+          type: boolean

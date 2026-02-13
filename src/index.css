@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #C41E3A;
+  --color-primary-dark: #A01830;
+  --color-primary-light: #E02E4A;
+  --color-primary-50: #FDF2F4;
+  --color-primary-100: #FCE5E9;
+  --color-primary-200: #F9CDD4;
+  --color-primary-300: #F4A4B3;
+  --color-primary-400: #EC7088;
+  --color-primary-500: #C41E3A;
+  --color-primary-600: #A01830;
+  --color-primary-700: #85152A;
+  --color-primary-800: #711528;
+  --color-primary-900: #611727;
+  --color-accent: #FFD700;
+  --color-accent-dark: #D4AF37;
+  --color-accent-light: #FFEC8B;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+@layer base {
+  html {
+    font-family: system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  .btn-secondary {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  .btn-secondary:hover {
+    background-color: #d1d5db;
+  }
+}
