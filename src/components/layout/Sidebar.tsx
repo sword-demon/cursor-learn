@@ -127,11 +127,11 @@ export function Sidebar({ currentTutorialId }: SidebarProps) {
                           )}
                         </span>
 
-                        <span className="truncate">{tutorial.title}</span>
+                        <span className="truncate min-w-0">{tutorial.title}</span>
 
                         {/* Difficulty Badge */}
                         <span
-                          className={`ml-auto text-xs px-1.5 py-0.5 rounded ${
+                          className={`flex-shrink-0 ml-auto text-xs px-1.5 py-0.5 rounded whitespace-nowrap ${
                             tutorial.difficulty === 'beginner'
                               ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300'
                               : tutorial.difficulty === 'intermediate'
