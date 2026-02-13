@@ -9,3 +9,5 @@ x 使用 /ui-ux-pro-max 和 /frontend-design 针对当前站点进行美化
 x 再添加一个github 的远程仓库进行提交代码
 x 根据上述推送到 2 个仓库的过程,在根目录下创建对应的操作文档 repository.md
 x @repository.md --style ohmsha --layout dense 生成知识漫画
+x 优化一下当前项目的 SEO
+x 域名换成 cursor-tutorial.wjstar.top; 安装 react-helmet-async 来帮助 SEO
