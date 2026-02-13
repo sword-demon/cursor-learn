@@ -12,6 +12,15 @@ import { configIgnoreTutorial } from '../data/tutorials/config-ignore';
 import { configShortcutsTutorial } from '../data/tutorials/config-shortcuts';
 import { agentWorkingTutorial } from '../data/tutorials/agent-working';
 import { agentCodebaseTutorial } from '../data/tutorials/agent-codebase';
+import { agentFeaturesTutorial } from '../data/tutorials/agent-features';
+import { agentBugsTutorial } from '../data/tutorials/agent-bugs';
+import { agentReviewTutorial } from '../data/tutorials/agent-review';
+import { configExtensionsTutorial } from '../data/tutorials/config-extensions';
+import { configThemesTutorial } from '../data/tutorials/config-themes';
+import { configShellTutorial } from '../data/tutorials/config-shell';
+import { configWorktreesTutorial } from '../data/tutorials/config-worktrees';
+import { agentCustomizeTutorial } from '../data/tutorials/agent-customize';
+import { agentTogetherTutorial } from '../data/tutorials/agent-together';
 
 // Tutorial registry
 const tutorials: Tutorial[] = [
@@ -24,8 +33,17 @@ const tutorials: Tutorial[] = [
   projectTodoTutorial,
   configIgnoreTutorial,
   configShortcutsTutorial,
+  configExtensionsTutorial,
+  configThemesTutorial,
+  configShellTutorial,
+  configWorktreesTutorial,
   agentWorkingTutorial,
   agentCodebaseTutorial,
+  agentFeaturesTutorial,
+  agentBugsTutorial,
+  agentReviewTutorial,
+  agentCustomizeTutorial,
+  agentTogetherTutorial,
 ].filter((t) => t.isPublished);
 
 /**
