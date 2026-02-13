@@ -11,3 +11,4 @@ x 根据上述推送到 2 个仓库的过程,在根目录下创建对应的操�
 x @repository.md --style ohmsha --layout dense 生成知识漫画
 x 优化一下当前项目的 SEO
 x 域名换成 cursor-tutorial.wjstar.top; 安装 react-helmet-async 来帮助 SEO
+x 根据 @repository.md 在根目录下创建一个 sh 脚本,用于方便提交代码到 2 个仓库
