@@ -4,6 +4,7 @@ import { Button } from '../../components/common/Button';
 import { ProgressBar } from '../../components/common/ProgressBar';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
+import { PageSEO } from '../../components/common/PageSEO';
 
 const configCards = [
   {
@@ -70,6 +71,11 @@ export function ConfigPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="配置教程"
+        description="掌握 Cursor IDE 的忽略文件、快捷键、主题、扩展等配置技巧。"
+        path="/config"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 页面标题 */}
         <div className="mb-8">

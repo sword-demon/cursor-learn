@@ -12,6 +12,7 @@ import { getTutorialById } from '../../services/tutorial-service';
 import { agentBugsTutorial } from '../../data/tutorials/agent-bugs';
 import { getExamplesByTutorialId } from '../../data/agents/agent-examples';
 import { getTipsByTutorialId } from '../../data/agents/beginner-tips';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function FindingBugsPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } =
@@ -70,6 +71,11 @@ export function FindingBugsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="查找 Bug"
+        description="使用 AI Agent 高效定位和修复代码中的 Bug。"
+        path="/agents/finding-bugs"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

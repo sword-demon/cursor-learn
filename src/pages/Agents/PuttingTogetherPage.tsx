@@ -12,6 +12,7 @@ import { getTutorialById } from '../../services/tutorial-service';
 import { agentTogetherTutorial } from '../../data/tutorials/agent-together';
 import { getExamplesByTutorialId } from '../../data/agents/agent-examples';
 import { getTipsByTutorialId } from '../../data/agents/beginner-tips';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function PuttingTogetherPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } =
@@ -70,6 +71,11 @@ export function PuttingTogetherPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="综合实践"
+        description="将所有 Agent 技能整合到实际项目开发流程中。"
+        path="/agents/putting-together"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

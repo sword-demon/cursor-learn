@@ -4,6 +4,7 @@ import { Button } from '../../components/common/Button';
 import { ProgressBar } from '../../components/common/ProgressBar';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
+import { PageSEO } from '../../components/common/PageSEO';
 
 const agentCards = [
   {
@@ -85,6 +86,11 @@ export function AgentsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="Agent 教程"
+        description="学习使用 Cursor AI Agent 高效编写代码和管理项目。"
+        path="/agents"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 页面标题 */}
         <div className="mb-8">

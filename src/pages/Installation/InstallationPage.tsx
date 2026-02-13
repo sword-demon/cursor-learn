@@ -10,6 +10,7 @@ import {
   SetupGuide,
   TutorialCompletion,
 } from '../../components/tutorial';
+import { PageSEO } from '../../components/common/PageSEO';
 
 const osOptions: { id: OSType; name: string }[] = [
   { id: 'windows', name: 'Windows' },
@@ -123,6 +124,11 @@ export function InstallationPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="安装指南"
+        description="下载、安装并配置 Cursor IDE, 支持 Windows、macOS 和 Linux 系统。"
+        path="/installation"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8">

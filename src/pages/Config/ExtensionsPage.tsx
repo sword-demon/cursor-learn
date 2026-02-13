@@ -8,6 +8,7 @@ import { BeginnerTipCard } from '../../components/common/BeginnerTip';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
 import { configExtensionsTutorial } from '../../data/tutorials/config-extensions';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function ExtensionsPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } = useProgress();
@@ -57,6 +58,11 @@ export function ExtensionsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="扩展管理"
+        description="了解 Cursor IDE 推荐的扩展和插件配置。"
+        path="/config/extensions"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

@@ -11,6 +11,7 @@ import { PRESET_PATTERNS } from '../../components/config/ignore-presets';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
 import { configIgnoreTutorial, ignorePatternExamples } from '../../data/tutorials/config-ignore';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function IgnoreFilesPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } = useProgress();
@@ -62,6 +63,11 @@ export function IgnoreFilesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="忽略文件配置"
+        description="学习如何配置 Cursor 的忽略文件, 优化 AI 上下文和项目索引。"
+        path="/config/ignore-files"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

@@ -7,6 +7,7 @@ import { RulePreview } from '../../components/rules/RulePreview';
 import { RuleExamples } from '../../components/rules/RuleExamples';
 import { RuleTester } from '../../components/rules/RuleTester';
 import { getAllTemplates, getTemplateById } from '../../data/cursor-rule-templates';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function RulesBuilderPage() {
   const templates = useMemo(() => getAllTemplates(), []);
@@ -106,6 +107,11 @@ export function RulesBuilderPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="规则生成器"
+        description="通过表单引导创建个性化的 .cursorrules 配置文件, 定制你的 AI 编程助手。"
+        path="/rules"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8">

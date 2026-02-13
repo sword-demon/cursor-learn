@@ -4,6 +4,7 @@ import { Button } from '../../components/common/Button';
 import { ProgressBar } from '../../components/common/ProgressBar';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function CommandsPage() {
   const { getTutorialProgress } = useProgress();
@@ -54,6 +55,11 @@ export function CommandsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="命令教程"
+        description="学习 Cursor IDE 的 Tab 补全、Ctrl+K 编辑、Ctrl+L 对话等核心 AI 命令。"
+        path="/commands"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8">

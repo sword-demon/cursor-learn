@@ -12,6 +12,7 @@ import { getTutorialById } from '../../services/tutorial-service';
 import { agentWorkingTutorial } from '../../data/tutorials/agent-working';
 import { getExamplesByTutorialId } from '../../data/agents/agent-examples';
 import { getTipsByTutorialId } from '../../data/agents/beginner-tips';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function WorkingWithAgentsPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } = useProgress();
@@ -68,6 +69,11 @@ export function WorkingWithAgentsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="使用 Agent 协作"
+        description="掌握与 AI Agent 高效协作的技巧和最佳实践。"
+        path="/agents/working-with-agents"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

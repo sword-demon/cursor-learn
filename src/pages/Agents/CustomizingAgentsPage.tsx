@@ -12,6 +12,7 @@ import { getTutorialById } from '../../services/tutorial-service';
 import { agentCustomizeTutorial } from '../../data/tutorials/agent-customize';
 import { getExamplesByTutorialId } from '../../data/agents/agent-examples';
 import { getTipsByTutorialId } from '../../data/agents/beginner-tips';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function CustomizingAgentsPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } =
@@ -70,6 +71,11 @@ export function CustomizingAgentsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="自定义 Agent"
+        description="学习如何自定义和配置 AI Agent 以适应你的工作流程。"
+        path="/agents/customizing-agents"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

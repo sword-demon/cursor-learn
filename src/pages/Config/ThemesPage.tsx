@@ -8,6 +8,7 @@ import { BeginnerTipCard } from '../../components/common/BeginnerTip';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
 import { configThemesTutorial } from '../../data/tutorials/config-themes';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function ThemesPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } = useProgress();
@@ -57,6 +58,11 @@ export function ThemesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="主题配置"
+        description="自定义 Cursor IDE 的外观主题和编辑器样式。"
+        path="/config/themes"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

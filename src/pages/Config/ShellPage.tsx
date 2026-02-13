@@ -8,6 +8,7 @@ import { BeginnerTipCard } from '../../components/common/BeginnerTip';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
 import { configShellTutorial } from '../../data/tutorials/config-shell';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function ShellPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } = useProgress();
@@ -57,6 +58,11 @@ export function ShellPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="Shell 配置"
+        description="配置 Cursor IDE 的终端和 Shell 环境。"
+        path="/config/shell"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

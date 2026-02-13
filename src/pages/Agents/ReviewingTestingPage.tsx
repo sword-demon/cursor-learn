@@ -12,6 +12,7 @@ import { getTutorialById } from '../../services/tutorial-service';
 import { agentReviewTutorial } from '../../data/tutorials/agent-review';
 import { getExamplesByTutorialId } from '../../data/agents/agent-examples';
 import { getTipsByTutorialId } from '../../data/agents/beginner-tips';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function ReviewingTestingPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } =
@@ -70,6 +71,11 @@ export function ReviewingTestingPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="代码审查与测试"
+        description="学习使用 AI Agent 进行代码审查和自动化测试。"
+        path="/agents/reviewing-testing"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

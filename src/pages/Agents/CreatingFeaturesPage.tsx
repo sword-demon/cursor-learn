@@ -12,6 +12,7 @@ import { getTutorialById } from '../../services/tutorial-service';
 import { agentFeaturesTutorial } from '../../data/tutorials/agent-features';
 import { getExamplesByTutorialId } from '../../data/agents/agent-examples';
 import { getTipsByTutorialId } from '../../data/agents/beginner-tips';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function CreatingFeaturesPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } =
@@ -70,6 +71,11 @@ export function CreatingFeaturesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="创建功能"
+        description="学习使用 AI Agent 快速创建新功能和实现需求。"
+        path="/agents/creating-features"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

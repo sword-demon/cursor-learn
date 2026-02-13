@@ -8,6 +8,7 @@ import { BeginnerTipCard } from '../../components/common/BeginnerTip';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getTutorialById } from '../../services/tutorial-service';
 import { configWorktreesTutorial } from '../../data/tutorials/config-worktrees';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function WorktreesPage() {
   const { startTutorial, completeStep, completeTutorial, getTutorialProgress } = useProgress();
@@ -57,6 +58,11 @@ export function WorktreesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="Worktrees 配置"
+        description="学习使用 Git Worktrees 在 Cursor 中高效管理多分支开发。"
+        path="/config/worktrees"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 面包屑 */}
         <nav className="mb-4 text-sm text-gray-500 dark:text-gray-400">

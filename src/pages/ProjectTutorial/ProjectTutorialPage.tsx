@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '../../components/commo
 import { Button } from '../../components/common/Button';
 import { ProgressBar, StepProgress } from '../../components/common/ProgressBar';
 import { useProgress } from '../../contexts/ProgressContext';
+import { PageSEO } from '../../components/common/PageSEO';
 
 interface ProjectStep {
   id: string;
@@ -109,6 +110,11 @@ export function ProjectTutorialPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="项目实战"
+        description="通过微型实战项目整合所学内容, 在真实场景中练习 Cursor IDE 的核心功能。"
+        path="/project"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8">

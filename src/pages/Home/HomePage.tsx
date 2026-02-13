@@ -4,6 +4,7 @@ import { Button } from '../../components/common/Button';
 import { ProgressBar } from '../../components/common/ProgressBar';
 import { useProgress } from '../../contexts/ProgressContext';
 import { getAllTutorials, getTutorialSummaries } from '../../services/tutorial-service';
+import { PageSEO } from '../../components/common/PageSEO';
 
 export function HomePage() {
   const { progress, getTutorialProgress } = useProgress();
@@ -73,6 +74,11 @@ export function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageSEO
+        title="交互式 Cursor IDE 快速入门"
+        description="通过交互式教程快速掌握 Cursor IDE 的核心功能, 包括安装指南、AI 命令练习、.cursorrules 生成器和项目实战。"
+        path="/"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#C41E3A] via-[#B01A33] to-[#7A1025] text-white pt-28 pb-20">
         {/* Grid pattern overlay */}
