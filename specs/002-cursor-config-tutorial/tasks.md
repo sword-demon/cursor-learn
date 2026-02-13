@@ -130,11 +130,11 @@
 
 **Independent Test**: 访问 /agents/features, 查看 prompt 示例并完成测验
 
-- [ ] T040 [P] [US9] 补充 Agent 示例对话数据 (功能构建 + TDD 场景) 在 src/data/agents/agent-examples.ts
-- [ ] T041 [P] [US9] 补充小白提示数据 (需求拆分类比) 在 src/data/agents/beginner-tips.ts
-- [ ] T042 [US9] 创建构建功能教程数据在 src/data/tutorials/agent-features.ts
-- [ ] T043 [US9] 创建构建功能教程页面在 src/pages/Agents/CreatingFeaturesPage.tsx
-- [ ] T044 [US9] 注册 agent-features 教程到 tutorial-service 在 src/services/tutorial-service.ts
+- [x] T040 [P] [US9] 补充 Agent 示例对话数据 (功能构建 + TDD 场景) 在 src/data/agents/agent-examples.ts
+- [x] T041 [P] [US9] 补充小白提示数据 (需求拆分类比) 在 src/data/agents/beginner-tips.ts
+- [x] T042 [US9] 创建构建功能教程数据在 src/data/tutorials/agent-features.ts
+- [x] T043 [US9] 创建构建功能教程页面在 src/pages/Agents/CreatingFeaturesPage.tsx
+- [x] T044 [US9] 注册 agent-features 教程到 tutorial-service 在 src/services/tutorial-service.ts
 
 **Checkpoint**: 所有 P1 用户故事完成, MVP 可交付
 
@@ -146,9 +146,9 @@
 
 **Independent Test**: 访问 /config/extensions, 查看安装方式和管理操作说明
 
-- [ ] T045 [P] [US3] 创建扩展管理教程数据在 src/data/tutorials/config-extensions.ts
-- [ ] T046 [US3] 创建扩展管理教程页面在 src/pages/Config/ExtensionsPage.tsx
-- [ ] T047 [US3] 注册 config-extensions 教程到 tutorial-service 在 src/services/tutorial-service.ts
+- [x] T045 [P] [US3] 创建扩展管理教程数据在 src/data/tutorials/config-extensions.ts
+- [x] T046 [US3] 创建扩展管理教程页面在 src/pages/Config/ExtensionsPage.tsx
+- [x] T047 [US3] 注册 config-extensions 教程到 tutorial-service 在 src/services/tutorial-service.ts
 
 **Checkpoint**: US3 完成
 
@@ -160,10 +160,10 @@
 
 **Independent Test**: 访问 /agents/bugs, 阅读调试策略并完成测验
 
-- [ ] T048 [P] [US10] 补充 Agent 示例对话数据 (Bug 描述场景) 在 src/data/agents/agent-examples.ts
-- [ ] T049 [US10] 创建修复 Bug 教程数据在 src/data/tutorials/agent-bugs.ts
-- [ ] T050 [US10] 创建修复 Bug 教程页面在 src/pages/Agents/FindingBugsPage.tsx
-- [ ] T051 [US10] 注册 agent-bugs 教程到 tutorial-service 在 src/services/tutorial-service.ts
+- [x] T048 [P] [US10] 补充 Agent 示例对话数据 (Bug 描述场景) 在 src/data/agents/agent-examples.ts
+- [x] T049 [US10] 创建修复 Bug 教程数据在 src/data/tutorials/agent-bugs.ts
+- [x] T050 [US10] 创建修复 Bug 教程页面在 src/pages/Agents/FindingBugsPage.tsx
+- [x] T051 [US10] 注册 agent-bugs 教程到 tutorial-service 在 src/services/tutorial-service.ts
 
 **Checkpoint**: US10 完成
 
@@ -175,10 +175,10 @@
 
 **Independent Test**: 访问 /agents/review, 学习审查策略并完成测验
 
-- [ ] T052 [P] [US11] 补充 Agent 示例对话数据 (代码审查场景) 在 src/data/agents/agent-examples.ts
-- [ ] T053 [US11] 创建审查测试教程数据在 src/data/tutorials/agent-review.ts
-- [ ] T054 [US11] 创建审查测试教程页面在 src/pages/Agents/ReviewingTestingPage.tsx
-- [ ] T055 [US11] 注册 agent-review 教程到 tutorial-service 在 src/services/tutorial-service.ts
+- [x] T052 [P] [US11] 补充 Agent 示例对话数据 (代码审查场景) 在 src/data/agents/agent-examples.ts
+- [x] T053 [US11] 创建审查测试教程数据在 src/data/tutorials/agent-review.ts
+- [x] T054 [US11] 创建审查测试教程页面在 src/pages/Agents/ReviewingTestingPage.tsx
+- [x] T055 [US11] 注册 agent-review 教程到 tutorial-service 在 src/services/tutorial-service.ts
 
 **Checkpoint**: 所有 P2 用户故事完成
 
@@ -188,13 +188,13 @@
 
 **Goal**: 完成剩余 3 个配置教程 (主题、Shell 命令、并行 Agent)
 
-- [ ] T056 [P] [US4] 创建主题配置教程数据在 src/data/tutorials/config-themes.ts
-- [ ] T057 [P] [US4] 创建主题配置教程页面在 src/pages/Config/ThemesPage.tsx
-- [ ] T058 [P] [US5] 创建 Shell 命令教程数据在 src/data/tutorials/config-shell.ts
-- [ ] T059 [P] [US5] 创建 Shell 命令教程页面在 src/pages/Config/ShellPage.tsx
-- [ ] T060 [P] [US6] 创建并行 Agent 教程数据在 src/data/tutorials/config-worktrees.ts
-- [ ] T061 [P] [US6] 创建并行 Agent 教程页面在 src/pages/Config/WorktreesPage.tsx
-- [ ] T062 注册 config-themes, config-shell, config-worktrees 教程到 tutorial-service 在 src/services/tutorial-service.ts
+- [x] T056 [P] [US4] 创建主题配置教程数据在 src/data/tutorials/config-themes.ts
+- [x] T057 [P] [US4] 创建主题配置教程页面在 src/pages/Config/ThemesPage.tsx
+- [x] T058 [P] [US5] 创建 Shell 命令教程数据在 src/data/tutorials/config-shell.ts
+- [x] T059 [P] [US5] 创建 Shell 命令教程页面在 src/pages/Config/ShellPage.tsx
+- [x] T060 [P] [US6] 创建并行 Agent 教程数据在 src/data/tutorials/config-worktrees.ts
+- [x] T061 [P] [US6] 创建并行 Agent 教程页面在 src/pages/Config/WorktreesPage.tsx
+- [x] T062 注册 config-themes, config-shell, config-worktrees 教程到 tutorial-service 在 src/services/tutorial-service.ts
 
 **Checkpoint**: 所有配置教程完成
 
@@ -204,12 +204,12 @@
 
 **Goal**: 完成剩余 2 个 Agent 教程 (自定义代理、综合运用)
 
-- [ ] T063 [P] [US12] 补充 Agent 示例对话和小白提示数据 (Rules/MCP 场景) 在 src/data/agents/agent-examples.ts 和 src/data/agents/beginner-tips.ts
-- [ ] T064 [P] [US12] 创建自定义代理教程数据在 src/data/tutorials/agent-customize.ts
-- [ ] T065 [P] [US12] 创建自定义代理教程页面在 src/pages/Agents/CustomizingAgentsPage.tsx
-- [ ] T066 [P] [US13] 创建综合运用教程数据 (含最终测验和完成徽章) 在 src/data/tutorials/agent-together.ts
-- [ ] T067 [P] [US13] 创建综合运用教程页面在 src/pages/Agents/PuttingTogetherPage.tsx
-- [ ] T068 注册 agent-customize, agent-together 教程到 tutorial-service 在 src/services/tutorial-service.ts
+- [x] T063 [P] [US12] 补充 Agent 示例对话和小白提示数据 (Rules/MCP 场景) 在 src/data/agents/agent-examples.ts 和 src/data/agents/beginner-tips.ts
+- [x] T064 [P] [US12] 创建自定义代理教程数据在 src/data/tutorials/agent-customize.ts
+- [x] T065 [P] [US12] 创建自定义代理教程页面在 src/pages/Agents/CustomizingAgentsPage.tsx
+- [x] T066 [P] [US13] 创建综合运用教程数据 (含最终测验和完成徽章) 在 src/data/tutorials/agent-together.ts
+- [x] T067 [P] [US13] 创建综合运用教程页面在 src/pages/Agents/PuttingTogetherPage.tsx
+- [x] T068 注册 agent-customize, agent-together 教程到 tutorial-service 在 src/services/tutorial-service.ts
 
 **Checkpoint**: 所有 13 个教程完成
 
@@ -219,12 +219,12 @@
 
 **Purpose**: 跨故事优化和收尾
 
-- [ ] T069 验证所有 13 个教程页面的进度追踪正确保存到 localStorage
-- [ ] T070 [P] 验证 Sidebar 正确显示所有教程分类和进度状态
-- [ ] T071 [P] 验证首页学习路径正确展示配置和 Agent 模块入口
-- [ ] T072 运行 TypeScript 类型检查: `npx tsc --noEmit`
-- [ ] T073 运行 ESLint 检查: `npm run lint`
-- [ ] T074 运行生产构建验证: `npm run build`
+- [x] T069 验证所有 13 个教程页面的进度追踪正确保存到 localStorage
+- [x] T070 [P] 验证 Sidebar 正确显示所有教程分类和进度状态
+- [x] T071 [P] 验证首页学习路径正确展示配置和 Agent 模块入口
+- [x] T072 运行 TypeScript 类型检查: `npx tsc --noEmit`
+- [x] T073 运行 ESLint 检查: `npm run lint`
+- [x] T074 运行生产构建验证: `npm run build`
 
 ---
 
