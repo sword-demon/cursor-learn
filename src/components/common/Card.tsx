@@ -17,7 +17,7 @@ export function Card({
   hover = false,
   onClick,
 }: CardProps) {
-  const baseStyles = 'bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700';
+  const baseStyles = 'bg-white dark:bg-gray-800/80 rounded-2xl border border-gray-100 dark:border-gray-700/50 backdrop-blur-sm';
 
   const paddingStyles = {
     none: '',
@@ -28,13 +28,13 @@ export function Card({
 
   const shadowStyles = {
     none: '',
-    sm: 'shadow-sm',
-    md: 'shadow-md',
-    lg: 'shadow-lg',
+    sm: 'shadow-sm shadow-gray-200/50 dark:shadow-black/10',
+    md: 'shadow-md shadow-gray-200/50 dark:shadow-black/10',
+    lg: 'shadow-lg shadow-gray-200/50 dark:shadow-black/10',
   };
 
   const hoverStyles = hover
-    ? 'cursor-pointer transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5'
+    ? 'cursor-pointer transition-all duration-200 ease-out hover:shadow-lg hover:shadow-gray-200/60 dark:hover:shadow-black/20 hover:-translate-y-0.5 hover:border-gray-200 dark:hover:border-gray-600/50'
     : '';
 
   const combinedClassName = `${baseStyles} ${paddingStyles[padding]} ${shadowStyles[shadow]} ${hoverStyles} ${className}`;

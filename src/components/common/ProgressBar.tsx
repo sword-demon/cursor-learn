@@ -26,12 +26,12 @@ export function ProgressBar({
   };
 
   const colorStyles = {
-    primary: 'bg-[#C41E3A]',
-    accent: 'bg-[#FFD700]',
-    green: 'bg-green-500',
+    primary: 'bg-gradient-to-r from-[#E02E4A] to-[#C41E3A]',
+    accent: 'bg-gradient-to-r from-[#FFEC8B] to-[#FFD700]',
+    green: 'bg-gradient-to-r from-emerald-400 to-green-500',
   };
 
-  const trackStyles = 'bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden';
+  const trackStyles = 'bg-gray-100 dark:bg-gray-700/60 rounded-full overflow-hidden';
 
   return (
     <div className={`w-full ${className}`}>
