@@ -1,0 +1,17 @@
+{
+  "name": "Cursor Tutorial - 交互式 Cursor IDE 快速入门",
+  "short_name": "Cursor Tutorial",
+  "description": "通过交互式教程快速掌握 Cursor IDE 的核心功能",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#C41E3A",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
