@@ -21,6 +21,10 @@ import { configShellTutorial } from '../data/tutorials/config-shell';
 import { configWorktreesTutorial } from '../data/tutorials/config-worktrees';
 import { agentCustomizeTutorial } from '../data/tutorials/agent-customize';
 import { agentTogetherTutorial } from '../data/tutorials/agent-together';
+import { speckitInstallTutorial } from '../data/tutorials/speckit-install';
+import { speckitWorkflowTutorial } from '../data/tutorials/speckit-workflow';
+import { speckitCaseTutorial } from '../data/tutorials/speckit-case';
+import { speckitAdvancedTutorial } from '../data/tutorials/speckit-advanced';
 
 // Tutorial registry
 const tutorials: Tutorial[] = [
@@ -44,6 +48,10 @@ const tutorials: Tutorial[] = [
   agentReviewTutorial,
   agentCustomizeTutorial,
   agentTogetherTutorial,
+  speckitInstallTutorial,
+  speckitWorkflowTutorial,
+  speckitCaseTutorial,
+  speckitAdvancedTutorial,
 ].filter((t) => t.isPublished);
 
 /**

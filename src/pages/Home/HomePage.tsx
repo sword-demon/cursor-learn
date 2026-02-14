@@ -70,6 +70,14 @@ export function HomePage() {
       path: '/agents',
       color: 'from-indigo-500 to-indigo-600',
     },
+    {
+      id: 'spec-kit',
+      title: 'Spec-Kit 教程',
+      description: '学习 Spec-Driven Development, 用规格驱动 AI 编码',
+      icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
+      path: '/spec-kit',
+      color: 'from-rose-500 to-rose-600',
+    },
   ];
 
   return (

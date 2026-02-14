@@ -71,6 +71,21 @@ const CustomizingAgentsPage = lazy(() =>
 const PuttingTogetherPage = lazy(() =>
   import('./pages/Agents/PuttingTogetherPage').then(m => ({ default: m.PuttingTogetherPage }))
 );
+const SpecKitPage = lazy(() =>
+  import('./pages/SpecKit/SpecKitPage').then(m => ({ default: m.SpecKitPage }))
+);
+const SpecKitInstallPage = lazy(() =>
+  import('./pages/SpecKit/SpecKitInstallPage').then(m => ({ default: m.SpecKitInstallPage }))
+);
+const SpecKitWorkflowPage = lazy(() =>
+  import('./pages/SpecKit/SpecKitWorkflowPage').then(m => ({ default: m.SpecKitWorkflowPage }))
+);
+const SpecKitCasePage = lazy(() =>
+  import('./pages/SpecKit/SpecKitCasePage').then(m => ({ default: m.SpecKitCasePage }))
+);
+const SpecKitAdvancedPage = lazy(() =>
+  import('./pages/SpecKit/SpecKitAdvancedPage').then(m => ({ default: m.SpecKitAdvancedPage }))
+);
 
 // 页面加载 fallback
 function PageLoading() {
@@ -145,6 +160,11 @@ function App() {
               <Route path="/agents/review" element={<ReviewingTestingPage />} />
               <Route path="/agents/customize" element={<CustomizingAgentsPage />} />
               <Route path="/agents/together" element={<PuttingTogetherPage />} />
+              <Route path="/spec-kit" element={<SpecKitPage />} />
+              <Route path="/spec-kit/install" element={<SpecKitInstallPage />} />
+              <Route path="/spec-kit/workflow" element={<SpecKitWorkflowPage />} />
+              <Route path="/spec-kit/case" element={<SpecKitCasePage />} />
+              <Route path="/spec-kit/advanced" element={<SpecKitAdvancedPage />} />
             </Route>
 
             {/* Simple routes */}
