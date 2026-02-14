@@ -25,6 +25,11 @@ import { speckitInstallTutorial } from '../data/tutorials/speckit-install';
 import { speckitWorkflowTutorial } from '../data/tutorials/speckit-workflow';
 import { speckitCaseTutorial } from '../data/tutorials/speckit-case';
 import { speckitAdvancedTutorial } from '../data/tutorials/speckit-advanced';
+import { skillsIntroTutorial } from '../data/tutorials/skills-intro';
+import { skillsInstallTutorial } from '../data/tutorials/skills-install';
+import { skillsOfficialTutorial } from '../data/tutorials/skills-official';
+import { skillsFrontendDesignTutorial } from '../data/tutorials/skills-frontend-design';
+import { skillsCustomTutorial } from '../data/tutorials/skills-custom';
 
 // Tutorial registry
 const tutorials: Tutorial[] = [
@@ -52,6 +57,11 @@ const tutorials: Tutorial[] = [
   speckitWorkflowTutorial,
   speckitCaseTutorial,
   speckitAdvancedTutorial,
+  skillsIntroTutorial,
+  skillsInstallTutorial,
+  skillsOfficialTutorial,
+  skillsFrontendDesignTutorial,
+  skillsCustomTutorial,
 ].filter((t) => t.isPublished);
 
 /**

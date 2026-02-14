@@ -1,8 +1,8 @@
 // Tutorial-related type definitions
 
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced';
-export type TutorialCategory = 'installation' | 'commands' | 'rules' | 'project' | 'config' | 'agents' | 'spec-kit';
-export type StepType = 'content' | 'simulation' | 'practice' | 'quiz';
+export type TutorialCategory = 'installation' | 'commands' | 'rules' | 'project' | 'config' | 'agents' | 'spec-kit' | 'skills';
+export type StepType = 'content' | 'simulation' | 'practice' | 'quiz' | 'comparison';
 export type CompletionCriteriaType = 'view' | 'action' | 'success' | 'time';
 
 export interface Tutorial {
@@ -132,4 +132,53 @@ export interface IgnorePattern {
   description: string;
   matchExamples: string[];
   noMatchExamples: string[];
+}
+
+// Skill 相关类型
+export type SkillCategory =
+  | 'creative-design'
+  | 'development'
+  | 'communication'
+  | 'document';
+
+export interface SkillCard {
+  id: string;
+  name: string;
+  displayName: string;
+  description: string;
+  category: SkillCategory;
+  useCases: string[];
+  exampleCommand: string;
+  exampleOutput: string;
+  isOfficial: boolean;
+  tags: string[];
+}
+
+export interface SkillComparison {
+  id: string;
+  title: string;
+  description: string;
+  skillName: string;
+  withoutSkill: {
+    prompt: string;
+    code: string;
+    screenshotUrl: string;
+  };
+  withSkill: {
+    prompt: string;
+    code: string;
+    screenshotUrl: string;
+  };
+  highlights: string[];
+}
+
+export interface SkillRecommendation {
+  id: string;
+  scenario: string;
+  scenarioIcon: string;
+  description: string;
+  recommendedSkills: {
+    skillId: string;
+    reason: string;
+  }[];
 }

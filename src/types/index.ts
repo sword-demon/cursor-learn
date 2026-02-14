@@ -21,6 +21,10 @@ export type {
   ShortcutCategory,
   KeyboardShortcut,
   IgnorePattern,
+  SkillCategory,
+  SkillCard,
+  SkillComparison,
+  SkillRecommendation,
 } from './tutorial';
 
 export type {

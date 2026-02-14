@@ -86,6 +86,24 @@ const SpecKitCasePage = lazy(() =>
 const SpecKitAdvancedPage = lazy(() =>
   import('./pages/SpecKit/SpecKitAdvancedPage').then(m => ({ default: m.SpecKitAdvancedPage }))
 );
+const SkillsPage = lazy(() =>
+  import('./pages/Skills/SkillsPage').then(m => ({ default: m.SkillsPage }))
+);
+const SkillsIntroPage = lazy(() =>
+  import('./pages/Skills/SkillsIntroPage').then(m => ({ default: m.SkillsIntroPage }))
+);
+const SkillsInstallPage = lazy(() =>
+  import('./pages/Skills/SkillsInstallPage').then(m => ({ default: m.SkillsInstallPage }))
+);
+const SkillsOfficialPage = lazy(() =>
+  import('./pages/Skills/SkillsOfficialPage').then(m => ({ default: m.SkillsOfficialPage }))
+);
+const SkillsFrontendPage = lazy(() =>
+  import('./pages/Skills/SkillsFrontendPage').then(m => ({ default: m.SkillsFrontendPage }))
+);
+const SkillsCustomPage = lazy(() =>
+  import('./pages/Skills/SkillsCustomPage').then(m => ({ default: m.SkillsCustomPage }))
+);
 
 // 页面加载 fallback
 function PageLoading() {
@@ -165,6 +183,12 @@ function App() {
               <Route path="/spec-kit/workflow" element={<SpecKitWorkflowPage />} />
               <Route path="/spec-kit/case" element={<SpecKitCasePage />} />
               <Route path="/spec-kit/advanced" element={<SpecKitAdvancedPage />} />
+              <Route path="/skills" element={<SkillsPage />} />
+              <Route path="/skills/intro" element={<SkillsIntroPage />} />
+              <Route path="/skills/install" element={<SkillsInstallPage />} />
+              <Route path="/skills/official" element={<SkillsOfficialPage />} />
+              <Route path="/skills/frontend-design" element={<SkillsFrontendPage />} />
+              <Route path="/skills/custom" element={<SkillsCustomPage />} />
             </Route>
 
             {/* Simple routes */}

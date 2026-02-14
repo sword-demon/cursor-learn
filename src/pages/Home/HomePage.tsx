@@ -78,6 +78,14 @@ export function HomePage() {
       path: '/spec-kit',
       color: 'from-rose-500 to-rose-600',
     },
+    {
+      id: 'skills',
+      title: 'Skills 教程',
+      description: '学习 Claude Code Skill 系统, 用 skill 扩展 AI 编码能力',
+      icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+      path: '/skills',
+      color: 'from-amber-500 to-amber-600',
+    },
   ];
 
   return (
