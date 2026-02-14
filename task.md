@@ -22,3 +22,14 @@ x Phase 6: User Story 4 - 辅助命令与进阶技巧
 x Phase 7: Polish & Cross-Cutting Concerns
 x 根据当前项目在根目录下写一篇合适的推广的微信公众号博文,当前项目已经部署到了 https://cursor-tutorial.wjstar.top 可以进行宣传一波
 x 首页的hero 部分的浏览教程的按钮,鼠标悬浮上去,字就看不见了,需要处理
+x 再新增一个交互式教程: skill 的使用以及安装以及插件安装和自定义技能介绍,可以着重介绍一下 anthropic 的官方的 skill,以及使用以下 frontend-design 前端 skill 带来的好处
+x /speckit.implement Phase 1: Setup (Shared Infrastructure)
+x /speckit.implement Phase 2: Foundational (Blocking Prerequisites)
+x /speckit.implement User Story 1 - Skill 概念入门与基础使用
+x /speckit.implement Phase 4: User Story 2 - Skill 安装与插件管理
+x Phase 5: User Story 3 - Anthropic 官方 Skill 介绍
+x Phase 6: User Story 4 - frontend-design Skill 深度体验, 案例图片在 @case/ 目录下分别对应三个提示词案例
+x 调整 SkillsInstallPage.tsx 页面的 skill 的安装命令，应该是没有的，可以参考 https://code.claude.com/docs/zh-CN/skills 文档页面的 skill 如何编写和使用
+x 调整 SkillsOfficialPage.tsx 官方 SKILL 的介绍，请参考 https://github.com/anthropics/skills 官方的 SKILL 仓库，里面有最完整的内容，根据真实的官方 skill repository 进行调整页面交互式教程
+x Phase 7: User Story 5 - 自定义 Skill 创建
+x Phase 8: Polish & Cross-Cutting Concerns
