@@ -20,3 +20,5 @@ x Phase 4: User Story 2 - 核心工作流教程
 x Phase 5: User Story 3 - 实战案例演练
 x Phase 6: User Story 4 - 辅助命令与进阶技巧
 x Phase 7: Polish & Cross-Cutting Concerns
+x 根据当前项目在根目录下写一篇合适的推广的微信公众号博文,当前项目已经部署到了 https://cursor-tutorial.wjstar.top 可以进行宣传一波
+x 首页的hero 部分的浏览教程的按钮,鼠标悬浮上去,字就看不见了,需要处理
