@@ -136,7 +136,7 @@
 
 ### Functional Requirements
 
-- **FR-001**: 系统必须提供 spec-kit 教程的导航入口, 包含概念入门、安装指南、核心工作流、实战案例、进阶技巧五个子教程
+- **FR-001**: 系统必须提供 spec-kit 教程的导航入口, 包含 1 个模块首页和 4 个子教程 (安装指南含概念入门、核心工作流、实战案例、进阶技巧)
 - **FR-002**: 安装指南必须支持操作系统选择 (Windows/macOS/Linux), 显示对应的安装命令
 - **FR-003**: 安装指南必须包含模拟终端组件, 用户可输入 `specify init` 等命令并看到模拟输出
 - **FR-004**: 工作流教程必须包含可视化流程图, 展示 constitution → specify → clarify → plan → analyze → tasks → implement 的完整流程
