@@ -122,7 +122,7 @@ export function HomePage() {
                 </Button>
               </Link>
               <Link to="/commands">
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white hover:text-[#C41E3A]">
+                <Button size="lg" variant="outline" className="!border-white/40 !text-white hover:!bg-white hover:!text-[#C41E3A]">
                   浏览教程
                 </Button>
               </Link>
