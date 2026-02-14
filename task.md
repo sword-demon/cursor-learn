@@ -33,3 +33,4 @@ x 调整 SkillsInstallPage.tsx 页面的 skill 的安装命令，应该是没有
 x 调整 SkillsOfficialPage.tsx 官方 SKILL 的介绍，请参考 https://github.com/anthropics/skills 官方的 SKILL 仓库，里面有最完整的内容，根据真实的官方 skill repository 进行调整页面交互式教程
 x Phase 7: User Story 5 - 自定义 Skill 创建
 x Phase 8: Polish & Cross-Cutting Concerns
+x /init 重写 CLAUDE.md, 精简冗余内容并补充架构信息
