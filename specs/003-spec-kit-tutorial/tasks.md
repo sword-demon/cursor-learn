@@ -28,10 +28,10 @@
 
 **Purpose**: 新增专用组件, 所有教程页面依赖这些组件
 
-- [ ] T004 Create TerminalSimulator component in src/components/speckit/TerminalSimulator.tsx (div + input, 预定义命令映射, 逐行输出动画, 命令历史, 非预期命令提示)
-- [ ] T005 [P] Create WorkflowDiagram component in src/components/speckit/WorkflowDiagram.tsx (CSS Grid + Framer Motion, 7 节点线性排列, 点击展开详情, 响应式水平/垂直切换)
-- [ ] T006 Add spec-kit lazy route imports and route definitions in src/App.tsx (/spec-kit, /spec-kit/install, /spec-kit/workflow, /spec-kit/case, /spec-kit/advanced)
-- [ ] T007 Add spec-kit module entry in Sidebar navigation in src/components/layout/Sidebar.tsx
+- [x] T004 Create TerminalSimulator component in src/components/speckit/TerminalSimulator.tsx (div + input, 预定义命令映射, 逐行输出动画, 命令历史, 非预期命令提示)
+- [x] T005 [P] Create WorkflowDiagram component in src/components/speckit/WorkflowDiagram.tsx (CSS Grid + Framer Motion, 7 节点线性排列, 点击展开详情, 响应式水平/垂直切换)
+- [x] T006 Add spec-kit lazy route imports and route definitions in src/App.tsx (/spec-kit, /spec-kit/install, /spec-kit/workflow, /spec-kit/case, /spec-kit/advanced)
+- [x] T007 Add spec-kit module entry in Sidebar navigation in src/components/layout/Sidebar.tsx
 
 **Checkpoint**: Foundation ready - 专用组件和路由就绪, 可开始各教程页面开发
 
@@ -45,10 +45,10 @@
 
 ### Implementation for User Story 1
 
-- [ ] T008 [P] [US1] Create install tutorial data with SDD concepts, prerequisites, install commands, terminal commands, quiz questions in src/data/tutorials/speckit-install.ts
-- [ ] T009 [P] [US1] Create SpecKitPage module overview page with tutorial cards and progress display in src/pages/SpecKit/SpecKitPage.tsx
-- [ ] T010 [US1] Create SpecKitInstallPage with SDD intro, OS selector, install steps, TerminalSimulator integration, BeginnerTip cards, QuizCard in src/pages/SpecKit/SpecKitInstallPage.tsx
-- [ ] T011 [US1] Add spec-kit module card with progress to HomePage learning path in src/pages/Home/HomePage.tsx
+- [x] T008 [P] [US1] Create install tutorial data with SDD concepts, prerequisites, install commands, terminal commands, quiz questions in src/data/tutorials/speckit-install.ts
+- [x] T009 [P] [US1] Create SpecKitPage module overview page with tutorial cards and progress display in src/pages/SpecKit/SpecKitPage.tsx
+- [x] T010 [US1] Create SpecKitInstallPage with SDD intro, OS selector, install steps, TerminalSimulator integration, BeginnerTip cards, QuizCard in src/pages/SpecKit/SpecKitInstallPage.tsx
+- [x] T011 [US1] Add spec-kit module card with progress to HomePage learning path in src/pages/Home/HomePage.tsx
 
 **Checkpoint**: US1 完成 - 用户可独立访问安装教程, 体验模拟终端, 完成测验
 
@@ -62,8 +62,8 @@
 
 ### Implementation for User Story 2
 
-- [ ] T012 [P] [US2] Create workflow tutorial data with 7 WorkflowNode definitions (constitution/specify/clarify/plan/analyze/tasks/implement), example inputs/outputs, quiz questions in src/data/tutorials/speckit-workflow.ts
-- [ ] T013 [US2] Create SpecKitWorkflowPage with WorkflowDiagram integration, node detail panels with ExpandableExample, BeginnerTip cards, QuizCard in src/pages/SpecKit/SpecKitWorkflowPage.tsx
+- [x] T012 [P] [US2] Create workflow tutorial data with 7 WorkflowNode definitions (constitution/specify/clarify/plan/analyze/tasks/implement), example inputs/outputs, quiz questions in src/data/tutorials/speckit-workflow.ts
+- [x] T013 [US2] Create SpecKitWorkflowPage with WorkflowDiagram integration, node detail panels with ExpandableExample, BeginnerTip cards, QuizCard in src/pages/SpecKit/SpecKitWorkflowPage.tsx
 
 **Checkpoint**: US1 + US2 完成 - 用户可独立学习安装和工作流
 
@@ -77,8 +77,8 @@
 
 ### Implementation for User Story 3
 
-- [ ] T014 [P] [US3] Create case study tutorial data with 6 CaseStudyStep definitions (init/constitution/specify/clarify/plan/tasks), generated document content for each step, quiz questions in src/data/tutorials/speckit-case.ts
-- [ ] T015 [US3] Create SpecKitCasePage with step-by-step navigation, command display, generated document viewer (CodeBlock), diff comparison, completion badge in src/pages/SpecKit/SpecKitCasePage.tsx
+- [x] T014 [P] [US3] Create case study tutorial data with 6 CaseStudyStep definitions (init/constitution/specify/clarify/plan/tasks), generated document content for each step, quiz questions in src/data/tutorials/speckit-case.ts
+- [x] T015 [US3] Create SpecKitCasePage with step-by-step navigation, command display, generated document viewer (CodeBlock), diff comparison, completion badge in src/pages/SpecKit/SpecKitCasePage.tsx
 
 **Checkpoint**: US1 + US2 + US3 完成 - 核心教程内容全部就绪
 
@@ -92,8 +92,8 @@
 
 ### Implementation for User Story 4
 
-- [ ] T016 [P] [US4] Create advanced tutorial data with auxiliary commands (analyze/checklist/taskstoissues), branch naming conventions, best practices, quiz questions in src/data/tutorials/speckit-advanced.ts
-- [ ] T017 [US4] Create SpecKitAdvancedPage with command sections, ExpandableExample for analyze report, BeginnerTip cards, QuizCard in src/pages/SpecKit/SpecKitAdvancedPage.tsx
+- [x] T016 [P] [US4] Create advanced tutorial data with auxiliary commands (analyze/checklist/taskstoissues), branch naming conventions, best practices, quiz questions in src/data/tutorials/speckit-advanced.ts
+- [x] T017 [US4] Create SpecKitAdvancedPage with command sections, ExpandableExample for analyze report, BeginnerTip cards, QuizCard in src/pages/SpecKit/SpecKitAdvancedPage.tsx
 
 **Checkpoint**: 所有 4 个教程页面完成
 
@@ -103,13 +103,13 @@
 
 **Purpose**: 跨页面优化和集成验证
 
-- [ ] T018 Add PageSEO metadata for all spec-kit pages in each SpecKit page component
-- [ ] T019 Verify progress tracking works across all 4 spec-kit tutorials (localStorage read/write via ProgressContext)
-- [ ] T020 Verify responsive layout: WorkflowDiagram vertical mode at 768px, TerminalSimulator horizontal scroll for long commands
-- [ ] T021 Run `npm run build` to verify production build succeeds with no errors
-- [ ] T022 Add prerequisite step check to sub-tutorial pages: display "建议先完成前置步骤" banner when previous tutorial incomplete (check ProgressContext, use BeginnerTipCard, non-blocking)
-- [ ] T023 [P] Write unit tests for TerminalSimulator: command matching, output rendering, non-expected command hint in src/components/speckit/__tests__/TerminalSimulator.test.tsx
-- [ ] T024 [P] Write unit tests for WorkflowDiagram: node rendering, click expand/collapse, responsive layout switch in src/components/speckit/__tests__/WorkflowDiagram.test.tsx
+- [x] T018 Add PageSEO metadata for all spec-kit pages in each SpecKit page component
+- [x] T019 Verify progress tracking works across all 4 spec-kit tutorials (localStorage read/write via ProgressContext)
+- [x] T020 Verify responsive layout: WorkflowDiagram vertical mode at 768px, TerminalSimulator horizontal scroll for long commands
+- [x] T021 Run `npm run build` to verify production build succeeds with no errors
+- [x] T022 Add prerequisite step check to sub-tutorial pages: display "建议先完成前置步骤" banner when previous tutorial incomplete (check ProgressContext, use BeginnerTipCard, non-blocking)
+- [x] T023 [P] Write unit tests for TerminalSimulator: command matching, output rendering, non-expected command hint in src/components/speckit/__tests__/TerminalSimulator.test.tsx
+- [x] T024 [P] Write unit tests for WorkflowDiagram: node rendering, click expand/collapse, responsive layout switch in src/components/speckit/__tests__/WorkflowDiagram.test.tsx
 
 ---
 
