@@ -1,7 +1,7 @@
 // Tutorial-related type definitions
 
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced';
-export type TutorialCategory = 'installation' | 'commands' | 'rules' | 'project' | 'config' | 'agents';
+export type TutorialCategory = 'installation' | 'commands' | 'rules' | 'project' | 'config' | 'agents' | 'spec-kit';
 export type StepType = 'content' | 'simulation' | 'practice' | 'quiz';
 export type CompletionCriteriaType = 'view' | 'action' | 'success' | 'time';
 

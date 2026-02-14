@@ -3,7 +3,7 @@
 **Input**: Design documents from `/specs/003-spec-kit-tutorial/`
 **Prerequisites**: plan.md (required), spec.md (required), research.md, data-model.md, quickstart.md
 
-**Tests**: Not explicitly requested in spec. Test tasks omitted.
+**Tests**: Unit tests for new components (TerminalSimulator, WorkflowDiagram) included in Phase 7.
 
 **Organization**: Tasks grouped by user story for independent implementation and testing.
 
@@ -18,9 +18,9 @@
 
 **Purpose**: 类型扩展和目录结构创建
 
-- [ ] T001 Add 'spec-kit' to TutorialCategory union type in src/types/tutorial.ts
-- [ ] T002 [P] Create speckit component directory src/components/speckit/
-- [ ] T003 [P] Create SpecKit page directory src/pages/SpecKit/
+- [x] T001 Add 'spec-kit' to TutorialCategory union type in src/types/tutorial.ts
+- [x] T002 [P] Create speckit component directory src/components/speckit/
+- [x] T003 [P] Create SpecKit page directory src/pages/SpecKit/
 
 ---
 
@@ -107,6 +107,9 @@
 - [ ] T019 Verify progress tracking works across all 4 spec-kit tutorials (localStorage read/write via ProgressContext)
 - [ ] T020 Verify responsive layout: WorkflowDiagram vertical mode at 768px, TerminalSimulator horizontal scroll for long commands
 - [ ] T021 Run `npm run build` to verify production build succeeds with no errors
+- [ ] T022 Add prerequisite step check to sub-tutorial pages: display "建议先完成前置步骤" banner when previous tutorial incomplete (check ProgressContext, use BeginnerTipCard, non-blocking)
+- [ ] T023 [P] Write unit tests for TerminalSimulator: command matching, output rendering, non-expected command hint in src/components/speckit/__tests__/TerminalSimulator.test.tsx
+- [ ] T024 [P] Write unit tests for WorkflowDiagram: node rendering, click expand/collapse, responsive layout switch in src/components/speckit/__tests__/WorkflowDiagram.test.tsx
 
 ---
 
@@ -178,13 +181,13 @@ Task: "Create SpecKitWorkflowPage in src/pages/SpecKit/SpecKitWorkflowPage.tsx"
 
 ## Summary
 
-- Total tasks: 21
+- Total tasks: 24
 - Phase 1 (Setup): 3 tasks
 - Phase 2 (Foundational): 4 tasks
 - US1 (P1 安装指南): 4 tasks
 - US2 (P1 工作流): 2 tasks
 - US3 (P2 实战案例): 2 tasks
 - US4 (P3 进阶技巧): 2 tasks
-- Polish: 4 tasks
+- Polish: 7 tasks
 - Parallel opportunities: 6 groups
 - Suggested MVP: Phase 1 + Phase 2 + Phase 3 (US1 only, 11 tasks)
