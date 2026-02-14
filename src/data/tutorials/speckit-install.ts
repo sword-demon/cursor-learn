@@ -1,0 +1,137 @@
+import type { Tutorial } from '../../types';
+import type { TerminalCommand } from '../../components/speckit/TerminalSimulator';
+
+// 终端模拟器命令映射
+export const installTerminalCommands: TerminalCommand[] = [
+  {
+    id: 'specify-init',
+    command: 'specify init my-project --ai claude',
+    output: [
+      'Creating new project: my-project',
+      'Initializing git repository...',
+      'Setting up spec-kit for Claude...',
+      'Copying templates...',
+      '',
+      'Project structure:',
+      '  my-project/',
+      '  ├── .specify/',
+      '  │   ├── config.yaml',
+      '  │   └── templates/',
+      '  ├── specs/',
+      '  │   └── (your features here)',
+      '  └── CLAUDE.md',
+      '',
+      'Project created successfully!',
+    ],
+    outputDelay: 80,
+    tutorialStepId: 'terminal-practice',
+    successMessage: '项目初始化完成! 现在可以开始使用 /speckit.specify 创建规格了。',
+  },
+  {
+    id: 'uvx-install',
+    command: 'uvx spec-kit',
+    output: [
+      'Resolved spec-kit',
+      'Installed spec-kit',
+      'spec-kit is ready to use!',
+    ],
+    outputDelay: 100,
+    tutorialStepId: 'terminal-practice',
+    successMessage: 'spec-kit 安装成功!',
+  },
+  {
+    id: 'uv-tool-install',
+    command: 'uv tool install spec-kit',
+    output: [
+      'Resolved 1 package in 2.3s',
+      'Installed spec-kit v0.1.0',
+      'Installed 1 executable: specify',
+    ],
+    outputDelay: 100,
+    tutorialStepId: 'terminal-practice',
+    successMessage: 'spec-kit 全局安装成功! 现在可以在任何目录使用 specify 命令。',
+  },
+];
+
+export const speckitInstallTutorial: Tutorial = {
+  id: 'speckit-install',
+  title: 'Spec-Kit 概念入门与安装',
+  description: '理解 Spec-Driven Development 理念, 安装并初始化 spec-kit',
+  difficulty: 'beginner',
+  estimatedTime: 10,
+  category: 'spec-kit',
+  order: 1,
+  prerequisites: [],
+  isPublished: true,
+  steps: [
+    {
+      id: 'sdd-intro',
+      order: 1,
+      title: 'Spec-Driven Development',
+      content: `什么是 Spec-Driven Development (SDD)?`,
+      type: 'content',
+      completionCriteria: { type: 'view' },
+    },
+    {
+      id: 'why-speckit',
+      order: 2,
+      title: '为什么需要 Spec-Kit',
+      content: `Vibe Coding 的局限性和 Spec-Kit 的解决方案`,
+      type: 'content',
+      completionCriteria: { type: 'view' },
+    },
+    {
+      id: 'prerequisites',
+      order: 3,
+      title: '安装前置条件',
+      content: `安装 spec-kit 需要的环境准备`,
+      type: 'content',
+      completionCriteria: { type: 'view' },
+    },
+    {
+      id: 'install-commands',
+      order: 4,
+      title: '安装 Spec-Kit',
+      content: `两种安装方式: uvx 一次性运行和 uv tool install 全局安装`,
+      type: 'content',
+      completionCriteria: { type: 'view' },
+    },
+    {
+      id: 'terminal-practice',
+      order: 5,
+      title: '模拟终端练习',
+      content: `在模拟终端中体验 specify init 命令`,
+      type: 'simulation',
+      completionCriteria: { type: 'action' },
+    },
+    {
+      id: 'quiz',
+      order: 6,
+      title: '知识检测',
+      content: `测试你对 Spec-Driven Development 和 spec-kit 的理解`,
+      type: 'quiz',
+      quiz: {
+        question: 'Spec-Driven Development 的核心理念是什么?',
+        type: 'single',
+        options: [
+          { id: 'a', text: '先写代码再补文档' },
+          { id: 'b', text: '先写规格再写代码, 用规格驱动 AI 编码' },
+          { id: 'c', text: '完全由 AI 自动生成所有代码' },
+          { id: 'd', text: '不需要任何文档, 直接编码' },
+        ],
+        correctAnswer: 'b',
+        explanation:
+          'Spec-Driven Development 的核心是 "先写规格再写代码"。通过结构化的规格文档, AI 能更准确地理解需求, 减少返工和误解。',
+      },
+      completionCriteria: { type: 'success' },
+    },
+    {
+      id: 'complete',
+      order: 7,
+      title: '安装完成',
+      content: `恭喜完成安装教程`,
+      type: 'content',
+      completionCriteria: { type: 'action' },
+    },
+  ],
+};
