@@ -13,3 +13,4 @@ x 优化一下当前项目的 SEO
 x 域名换成 cursor-tutorial.wjstar.top; 安装 react-helmet-async 来帮助 SEO
 x 根据 @repository.md 在根目录下创建一个 sh 脚本,用于方便提交代码到 2 个仓库
 x 根据 spec-kit 的仓库 https://github.com/doggy8088/spec-kit 以及文档地址:https://doggy8088.github.io/spec-kit/, 新增 spec-kit 交互式教程,从安装步骤到 Spec-Driven Development 的开发的流程介绍以及使用案例
+x 对 spec-kit 教程的 spec.md, plan.md, tasks.md 进行跨文档一致性分析并修复 TOP 3 问题
