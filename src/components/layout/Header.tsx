@@ -22,6 +22,7 @@ export function Header() {
     { path: '/commands', label: '命令教程' },
     { path: '/rules', label: '规则生成器' },
     { path: '/project', label: '项目实战' },
+    { path: '/about', label: '关于' },
   ];
 
   return (

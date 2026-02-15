@@ -104,6 +104,9 @@ const SkillsFrontendPage = lazy(() =>
 const SkillsCustomPage = lazy(() =>
   import('./pages/Skills/SkillsCustomPage').then(m => ({ default: m.SkillsCustomPage }))
 );
+const AboutPage = lazy(() =>
+  import('./pages/About/AboutPage').then(m => ({ default: m.AboutPage }))
+);
 
 // 页面加载 fallback
 function PageLoading() {
@@ -194,6 +197,7 @@ function App() {
             {/* Simple routes */}
             <Route element={<SimpleLayout />}>
               <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
             </Route>
           </Routes>
         </TutorialProvider>
