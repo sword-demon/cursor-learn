@@ -34,3 +34,4 @@ x 调整 SkillsOfficialPage.tsx 官方 SKILL 的介绍，请参考 https://githu
 x Phase 7: User Story 5 - 自定义 Skill 创建
 x Phase 8: Polish & Cross-Cutting Concerns
 x /init 重写 CLAUDE.md, 精简冗余内容并补充架构信息
+x 将 public/images/social-card.png 个人名片使用 /frontend-design skill 设计嵌入网站中
